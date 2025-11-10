@@ -5,7 +5,9 @@ const {src, dest, watch, series, parallel } = require('gulp');
 const log = require('fancy-log');
 const colors = require('ansi-colors');
 const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
+// Use Dart Sass with gulp-sass v5 to avoid node-sass native build issues
+const dartSass = require('sass');
+const sass = require('gulp-sass')(dartSass);
 const bourbon = require('node-bourbon').includePaths;
 const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');

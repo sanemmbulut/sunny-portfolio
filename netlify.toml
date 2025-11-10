@@ -1,0 +1,6 @@
+[build]
+  # npm install çalıştırmayı atla ve "hiçbir şey yapma" komutunu çalıştır.
+  command = "echo 'No build required'"
+  
+  # Ana dizini yayınla.
+  publish = "."
